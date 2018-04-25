@@ -198,8 +198,8 @@ else
 		;;
 	esac
 	echo ""
-	echo "Qual porta você deseja usar, melhor deixar essa ai..."
-	read -p "Port: " -e -i 8090 PORT
+	echo "Qual porta você deseja usar, melhor deixar essa ai, se for localweb usa a porta 443..."
+	read -p "Port: " -e -i 1194 PORT
 	echo ""
 	echo "Qual DNS você deseja usar ?"
 	echo "   1) Sistema(Recomendado)"
@@ -405,5 +405,5 @@ verb 3" > /etc/openvpn/client-common.txt
 	echo "Concluido!"
 	echo ""
 	echo "Seu arquivo está disponivel em" ~/"$CLIENT.ovpn"
-	echo "Para mais opções digite (bash vivo.sh)!"
+	echo "Para mais opções digite (bash openvivo.sh)!"
 fi
