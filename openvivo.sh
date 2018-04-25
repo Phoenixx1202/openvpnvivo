@@ -70,13 +70,13 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 	while :
 	do
 	clear
-		echo "OpenVPN já está instalado"
+		echo "Eita Porra o OpenVPN já está instalado"
 		echo ""
 		echo "O que você deseja fazer?"
 		echo "   1) Adicionar novo usuário"
 		echo "   2) Remover um usuário"
-		echo "   3) Remover OpenVPN"
-		echo "   4) Sair"
+		echo "   3) Remover Essa Porra de OpenVPN"
+		echo "   4) Fugir"
 		read -p "Selecione a opção [1-4]: " option
 		case $option in
 			1) 
@@ -406,4 +406,6 @@ verb 3" > /etc/openvpn/client-common.txt
 	echo ""
 	echo "Seu arquivo está disponivel em" ~/"$CLIENT.ovpn"
 	echo "Para mais opções digite (bash openvivo.sh)!"
+	echo "@Phoenix1203"
+fi
 fi
