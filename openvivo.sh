@@ -387,7 +387,7 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote portalrecarga.vivo.com.br $PORT
+remote portalrecarga.vivo.com.br/recarga $PORT
 http-proxy $IP 80
 resolv-retry infinite
 nobind
