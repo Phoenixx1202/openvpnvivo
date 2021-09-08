@@ -199,7 +199,7 @@ else
 	esac
 	echo ""
 	echo "Qual porta você deseja usar, melhor deixar essa ai, se for localweb usa a porta 443..."
-	read -p "Port: " -e -i 1194 PORT
+	read -p "Port: " -e -i 80 PORT
 	echo ""
 	echo "Qual DNS você deseja usar ?"
 	echo "   1) Sistema(Recomendado)"
@@ -214,6 +214,8 @@ else
 	echo "Use somente o nome,sem caracteres especiais"
 	read -p "Client name: " -e -i client CLIENT
 	echo ""
+	read -p "Entre com o Dominio: " -e -i DOMINIO
+	echo ""	
 	echo "Okay, você está pronto para executar o openvpn "
 	read -n1 -r -p "Pressione uma tecla para continuar..."
 	if [[ "$OS" = 'debian' ]]; then
@@ -387,8 +389,8 @@ dev tun
 proto $PROTOCOL
 sndbuf 0
 rcvbuf 0
-remote portalrecarga.vivo.com.br/recarga $PORT
-http-proxy $IP 80
+remote $DOMINIO $PORT
+http-proxy 104.16.18.94 80
 resolv-retry infinite
 nobind
 persist-key
